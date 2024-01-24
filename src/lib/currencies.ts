@@ -1,3 +1,3 @@
 export function getCurrencies(): string[] {
-  return ["Fruits", "Vegetables", "Beverages"];
+  return ["USD", "EUR", "PHP"];
 }

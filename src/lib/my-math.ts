@@ -8,9 +8,8 @@ export class MyMath {
   }
 
   absolute(a: number): number {
-    if (a > 0) return a;
-    if (a < 0) return -a;
-    return 0;
+    if (a >= 0) return a;
+    return -a;
   }
 
   getOddNumbers(limit: number): number[] {
