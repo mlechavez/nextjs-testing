@@ -5,5 +5,5 @@ export type Product = {
 };
 
 export function getProduct(id: number): Product {
-  return { id, name: "T-Shirt", price: 10 };
+  return { id, name: "T-Shirt", price: 10, category: "test" };
 }
