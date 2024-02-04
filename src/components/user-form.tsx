@@ -14,14 +14,13 @@ const UserForm = () => {
           </Label>
           <Input type="text" id="name" />
         </div>
-        <div className="mb-3 flex flex-col gap-2">
-        </div>
+        <div className="mb-3 flex flex-col gap-2"></div>
         <Label htmlFor="age" className="mb-3">
           Age
         </Label>
         <Input type="number" id="name" />
       </div>
-      <Button>Submit</Button>
+      <Button type="submit">Submit</Button>
     </form>
   );
 };
