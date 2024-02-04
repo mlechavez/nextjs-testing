@@ -13,6 +13,7 @@ const UserForm = () => {
             Name
           </Label>
           <Input type="text" id="name" />
+        </div>
         <div className="mb-3 flex flex-col gap-2">
         </div>
         <Label htmlFor="age" className="mb-3">
