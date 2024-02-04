@@ -24,7 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-w-6xl mx-auto pt-5">{children}</div>
+          <div className="max-w-3xl mx-auto pt-5">{children}</div>
         </ThemeProvider>
       </body>
     </html>
