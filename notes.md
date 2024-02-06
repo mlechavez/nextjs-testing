@@ -24,6 +24,7 @@
 - Role
   - Button element has a button, anchor element has a link role, h1 to h6 elements have a heading role, etc.
   - However, if you're working with elements that do not have a default role, the role attribute can be used to specify an element's role.
+  - with its option, you can use the label of an input element, text content of a button or the value of the aria-label
 - LabelText
 - PlaceholderText
 - Text
