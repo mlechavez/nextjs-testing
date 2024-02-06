@@ -69,7 +69,7 @@ const UserForm = () => {
                 Age
               </FormLabel>
               <FormControl>
-                <Input type="number" id="name" {...field} />
+                <Input type="number" id="age" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
