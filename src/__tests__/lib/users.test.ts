@@ -5,7 +5,7 @@ describe("users", () => {
 
   it.each(cases)("should throw an error when the value is %s", (a) => {
     expect(() => {
-      registerUser(b);
+      registerUser(a);
     }).toThrow();
   });
 });
