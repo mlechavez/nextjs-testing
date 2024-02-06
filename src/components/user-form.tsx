@@ -64,7 +64,7 @@ const UserForm = () => {
 
         {/* <FormField */}
         {/*   control={form.control} */}
-        {/*   name="age" */}
+        {/*   name="firstName" */}
         {/*   render={({ field }) => ( */}
         {/*     <FormItem> */}
         {/*       <FormLabel htmlFor="lastName" className="mb-3"> */}
@@ -86,10 +86,7 @@ const UserForm = () => {
               <FormLabel htmlFor="age" className="mb-3">
                 Fruits
               </FormLabel>
-              <Select
-                onValueChange={field.onChange}
-                defaultValue={field.value.toString()}
-              >
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder="Select a fruit" />
