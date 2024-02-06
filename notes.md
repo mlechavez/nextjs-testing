@@ -33,6 +33,12 @@
 - Title
 - TestId
 
+## Info
+
+getBy and getAllBy methods of queries to asert if elements are present in the DOM.
+queryBy and queryAllBy methods of queries to assert if elements are not present in the DOM.
+find and findAllBy methods of queries to assert if elements appear in the DOM asynchronously.
+
 ## What to test
 
 - Test component renders
