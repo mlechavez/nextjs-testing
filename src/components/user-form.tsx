@@ -14,7 +14,9 @@ import {
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -34,8 +36,8 @@ const UserForm = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
     defaultValues: {
-      name: "",
-      age: 18,
+      firstName: "",
+      lastName: "",
     },
   });
 
@@ -51,56 +53,59 @@ const UserForm = () => {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor="name">Name</FormLabel>
+              <FormLabel htmlFor="firstName">First name</FormLabel>
               <FormControl>
-                <Input type="text" id="name" {...field} />
+                <Input type="text" id="firstName" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <FormField
-          control={form.control}
-          name="age"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel htmlFor="age" className="mb-3">
-                Age
-              </FormLabel>
-              <FormControl>
-                <Input type="number" id="age" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        {/* <FormField */}
+        {/*   control={form.control} */}
+        {/*   name="age" */}
+        {/*   render={({ field }) => ( */}
+        {/*     <FormItem> */}
+        {/*       <FormLabel htmlFor="lastName" className="mb-3"> */}
+        {/*         Last name */}
+        {/*       </FormLabel> */}
+        {/*       <FormControl> */}
+        {/*         <Input type="text" id="lastName" {...field} /> */}
+        {/*       </FormControl> */}
+        {/*       <FormMessage /> */}
+        {/*     </FormItem> */}
+        {/*   )} */}
+        {/* /> */}
 
         <FormField
           control={form.control}
-          name="age"
+          name="fruit"
           render={({ field }) => (
             <FormItem>
               <FormLabel htmlFor="age" className="mb-3">
-                Age
+                Fruits
               </FormLabel>
-              <FormControl>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value.toString()}
-                >
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a verified email to display" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="m@example.com">m@example.com</SelectItem>
-                    <SelectItem value="m@google.com">m@google.com</SelectItem>
-                    <SelectItem value="m@support.com">m@support.com</SelectItem>
-                  </SelectContent>
-                </Select>
-              </FormControl>
+              <Select
+                onValueChange={field.onChange}
+                defaultValue={field.value.toString()}
+              >
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a fruit" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Fruits</SelectLabel>
+                    <SelectItem value="apple">Apple</SelectItem>
+                    <SelectItem value="banana">Banana</SelectItem>
+                    <SelectItem value="blueberry">Blueberry</SelectItem>
+                    <SelectItem value="grapes">Grapes</SelectItem>
+                    <SelectItem value="pineapple">Pineapple</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
